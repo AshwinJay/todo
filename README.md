@@ -9,7 +9,7 @@ If you have many tabs open but would like to place a dummy tab with a custom mes
  * StackOverflow snippets
 
 # Usage
-Download (or clone) this repo and open [somewhere-on-disk/todo/index.html] in your browser. Customize the tab by providing a name like [somewhere-on-disk/todo/index.html?name=⚑&nbspNews]. If you make notes, it will stay in your local browser storage and survive restarts.
+Download (or clone) this repo and open [somewhere-on-disk/todo/index.html](somewhere-on-disk/todo/index.html) in your browser. Customize the tab by providing a name like [somewhere-on-disk/todo/index.html?name=⚑ News](somewhere-on-disk/todo/index.html?name=⚑&nbsp;News). If you make notes, it will stay in your local browser storage and survive restarts.
 
 # License
 [MIT](LICENSE.md)
