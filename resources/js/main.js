@@ -1,5 +1,6 @@
+var namespace= document.getElementById('message').innerHTML;
 
-var data = (localStorage.getItem('todoList')) ? JSON.parse(localStorage.getItem('todoList')):{
+var data = (localStorage.getItem(namespace)) ? JSON.parse(localStorage.getItem(namespace)):{
   todo: [],
   completed: []
 };
@@ -49,7 +50,7 @@ function renderTodoList() {
 }
 
 function dataObjectUpdated() {
-  localStorage.setItem('todoList', JSON.stringify(data));
+  localStorage.setItem(namespace, JSON.stringify(data));
 }
 
 function removeItem() {
@@ -95,7 +96,12 @@ function addItemToDOM(text, completed) {
   var list = (completed) ? document.getElementById('completed'):document.getElementById('todo');
 
   var item = document.createElement('li');
-  item.innerText = text;
+  var textLink = text.replace(/\[(.*?)\]\((.*?)\)/gm, '<a href="$2">$1</a>');
+  if (text === textLink) {
+    item.innerText = text;
+  } else {
+    item.innerHTML = textLink;
+  }
 
   var buttons = document.createElement('div');
   buttons.classList.add('buttons');

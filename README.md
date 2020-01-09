@@ -1,9 +1,15 @@
-# To-do
-A simple todo list app built in HTML, CSS and JavaScript.
+# "Marker" tab with the ability to make a To-do list
+A simple marker tab for folks who keep many tabs open in their browser. With a bonus feature of being able make quick notes. Notes can also be links using the Markdown syntax.
 
-If you want to learn how to build this yourself you can check out the YouTube video that walks through the whole process here:
-- [Learn to code a to-do list app in JavaScript - Part 1](https://www.youtube.com/watch?v=2wCpkOk2uCg)
-- [Learn to code a to-do list app in JavaScript - Part 2](https://www.youtube.com/watch?v=bGLZ2pwCaiI)
+# What is a marker tab?
+If you have many tabs open but would like to place a dummy tab with a custom message to help you stay organized, then this is what you need! Of course there are fancy browser plugins but this is plain HTML + JavaScript + CSS and it does not need access to your data.
 
-## License
-[MIT](LICENSE.md) © [Max Sandelin](https://instagram.com/themaxsandelin)
+# Cobbled together from
+ * [Max Sandelin's To-do](https://github.com/themaxsandelin/todo)
+ * StackOverflow snippets
+
+# Usage
+Download (or clone) this repo and open [somewhere-on-disk/todo/index.html] in your browser. Customize the tab by providing a name like [somewhere-on-disk/todo/index.html?name=⚑&nbspNews]. If you make notes, it will stay in your local browser storage and survive restarts.
+
+# License
+[MIT](LICENSE.md)
