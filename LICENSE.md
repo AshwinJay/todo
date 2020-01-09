@@ -1,6 +1,8 @@
 MIT License
 
-Copyright (c) 2016 Max Sandelin
+Original To-do application - Copyright (c) 2016 Max Sandelin
+
+Modifications and additions - Copyright (c) 2020 Ashwin Jayaprakash
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

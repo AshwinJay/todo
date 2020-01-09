@@ -1,12 +1,36 @@
 @charset "UTF-8";
 
 body {
-  background: #edf0f1;
   padding: 80px 0 0 0;
 }
 
 body, input, button {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Permanent Marker';
+  background-color: #002b36;
+  display: table;
+  height: 50%;
+  width: 100%;
+}
+
+a {
+  color: orange;
+  text-decoration: none;
+}
+
+.center-block {
+  text-align: center;
+  display: table-cell;
+  vertical-align: bottom;
+}
+
+.message {
+  color: orange;
+  font-size: 38px;
+    font-family: 'Permanent Marker';
+    letter-spacing: 3px;
+  text-shadow:
+    0 0  5px salmon,
+    0 0  10px black;
 }
 
 .noFill {
@@ -23,7 +47,7 @@ header {
   left: 0;
   z-index: 5;
 
-  background: #25b99a;
+  background-color: #002b36;
   box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -116,10 +140,10 @@ ul.todo li {
   float: left;
   font-size: 14px;
   font-weight: 500;
-  color: #444;
+  color: #fff;
   line-height: 22px;
 
-  background: #fff;
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 5px;
   position: relative;
   box-shadow: 0px 1px 2px rgba(44, 62, 80, 0.10);
@@ -223,26 +247,11 @@ ul.todo#completed {
   padding: 60px 0 0 0;
 }
 
-ul.todo#completed:before {
-  content: '';
-  width: 150px;
-  height: 1px;
-  background: #d8e5e0;
-
-  position: absolute;
-  top: 30px;
-  left: 50%;
-
-  margin: 0 0 0 -75px;
-}
-
 ul.todo#todo:empty:after {
-  content: 'You have nothing to-do!';
   margin: 15px 0 0 0;
 }
 
 ul.todo#completed:empty:after {
-  content: 'You have yet to complete any tasks.';
 }
 
 ul.todo#todo:after,
