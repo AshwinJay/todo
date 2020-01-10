@@ -4,6 +4,7 @@
         <!-- Content Type Meta tag -->
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
+        <!-- https://stackoverflow.com/questions/950428/how-to-generate-blank-favicon-programatically -->
         <link href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAsC8qAP+EAACzh1cAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAACAAAAAAAAACAAAAAAAAEiAAAAADAAAiAAAAAAMzAiAAAAAAAAMzAAAAAAAAAiMzMAAAAAAAADAzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA" rel="icon" type="image/x-icon" />
         
         <!--Responsive Viewport Meta tag-->
@@ -49,27 +50,27 @@
 		
         <!-- From https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript/3855394#3855394 -->
 		<script lang="javascript">
-			var queryParamMap = (
-                function(queryString) {
-    			    if (queryString == null) return {};
-    			    var queryParamMap = {};
-    			    for (var i = 0; i < queryString.length; ++i) {
-    			        var pair = queryString[i].split('=', 2);
-    			        if (pair.length == 1)
-    			            queryParamMap[pair[0]] = "";
-    			        else
-    			            queryParamMap[pair[0]] = decodeURIComponent(pair[1].replace(/\+/g, " "));
+		        var queryParamMap = (
+                            function(queryString) {
+    			        if (queryString == null) return {};
+    			        var queryParamMap = {};
+    			        for (var i = 0; i < queryString.length; ++i) {
+    			            var pair = queryString[i].split('=', 2);
+    			            if (pair.length == 1)
+    			                queryParamMap[pair[0]] = "";
+    			            else
+    			                queryParamMap[pair[0]] = decodeURIComponent(pair[1].replace(/\+/g, " "));
+    			        }
+    			        return queryParamMap;
     			    }
-    			    return queryParamMap;
-    			 }
-            )(window.location.search.substr(1).split('&'));
+                        )(window.location.search.substr(1).split('&'));
 
 			var name = queryParamMap["name"];
 			if (name === "undefined" || name == null) {
-                name = "⚑ 🧘🏻‍♂️";
-            }
+                            name = "⚑";
+                        }
 
-            document.title = name;
+                        document.title = name;
 			document.getElementById('message').innerHTML = name;
 		</script>
 
