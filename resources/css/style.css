@@ -73,19 +73,19 @@ header input {
 }
 
 header input::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.2);
 }
 
 header input:-moz-input-placeholder {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.2);
 }
 
 header input::-moz-input-placeholder {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.2);
 }
 
 header input:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.2);
 }
 
 header button {
@@ -98,7 +98,7 @@ header button {
   z-index:2;
 
   border-radius: 25px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.2);
   border: 0px;
   box-shadow: none;
   outline: none;
@@ -120,7 +120,7 @@ header button svg {
 }
 
 header button svg .fill {
-  fill: #25b99a;
+  fill: orange;
 }
 
 .container {
@@ -138,7 +138,7 @@ ul.todo li {
   width: 100%;
   min-height: 50px;
   float: left;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 500;
   color: #fff;
   line-height: 22px;
