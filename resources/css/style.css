@@ -98,7 +98,7 @@ header button {
   z-index:2;
 
   border-radius: 25px;
-  background: rgba(255, 255, 255, 0.2);
+  background: none;
   border: 0px;
   box-shadow: none;
   outline: none;
@@ -120,7 +120,7 @@ header button svg {
 }
 
 header button svg .fill {
-  fill: orange;
+  fill: #25b99a;
 }
 
 .container {
