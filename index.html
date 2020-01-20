@@ -51,7 +51,7 @@
         <!-- From https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript/3855394#3855394 -->
 		<script lang="javascript">
 		        var queryParamMap = (
-                            function(queryString) {
+                    function(queryString) {
     			        if (queryString == null) return {};
     			        var queryParamMap = {};
     			        for (var i = 0; i < queryString.length; ++i) {
@@ -63,15 +63,15 @@
     			        }
     			        return queryParamMap;
     			    }
-                        )(window.location.search.substr(1).split('&'));
+                )(window.location.search.substr(1).split('&'));
 
-			var name = queryParamMap["name"];
-			if (name === "undefined" || name == null) {
-                            name = "⚑";
-                        }
+			    var name = queryParamMap["name"];
+			    if (name === "undefined" || name == null) {
+                    name = "⚑";
+                }
 
-                        document.title = name;
-			document.getElementById('message').innerHTML = name;
+                document.title = name;
+			    document.getElementById('message').innerHTML = name;
 		</script>
 
 		<script id="todo-script" src="resources/js/main.js"></script>
