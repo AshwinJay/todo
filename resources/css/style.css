@@ -5,7 +5,8 @@ body {
 }
 
 body, input, button {
-  font-family: 'Permanent Marker';
+  /* From: https://css-tricks.com/snippets/css/system-font-stack/ */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   background-color: #002b36;
   display: table;
   height: 50%;
@@ -26,8 +27,9 @@ a {
 .message {
   color: orange;
   font-size: 38px;
-    font-family: 'Permanent Marker';
-    letter-spacing: 3px;
+  /* From: https://css-tricks.com/snippets/css/system-font-stack/ */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  letter-spacing: 3px;
   text-shadow:
     0 0  5px salmon,
     0 0  10px black;
