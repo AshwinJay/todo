@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>»</title>
+        <style>
+            body {
+                margin: 0;
+                min-height: 100vh;
+                font-family:
+                    system-ui,
+                    -apple-system,
+                    sans-serif;
+                background-color: #f4e4bc;
+                background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.15' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.1'/%3E%3C/svg%3E");
+
+                /* Center content vertically and horizontally */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 1rem;
+            }
+            .content {
+                text-align: center;
+                max-width: 800px;
+                background: rgba(255, 255, 255, 0.3);
+                padding: 2rem;
+                border-radius: 50px;
+            }
+            h1 {
+                margin: 0;
+                word-break: break-word;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <h1 id="pageTitle">»</h1>
+        </div>
+
+        <script>
+            // Get and sanitize title from URL parameter
+            const urlParams = new URLSearchParams(window.location.search);
+            const rawTitle = urlParams.get("title");
+
+            if (rawTitle) {
+                // Decode and sanitize the title
+                const decodedTitle = decodeURIComponent(rawTitle);
+                const sanitizedTitle = decodedTitle
+                    .replace(/</g, "&lt;")
+                    .replace(/>/g, "&gt;")
+                    .replace(/"/g, "&quot;")
+                    .replace(/'/g, "&#039;");
+
+                document.title = sanitizedTitle;
+                document.getElementById("pageTitle").innerHTML = sanitizedTitle;
+
+                const favicon =
+                    document.querySelector('link[rel="icon"]') ||
+                    document.querySelector('link[rel="shortcut icon"]');
+
+                // Create new favicon if none exists
+                const newFavicon = document.createElement("link");
+                newFavicon.rel = "icon";
+                newFavicon.type = "image/svg+xml";
+                newFavicon.href = `data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2240%22 stroke=%22%23586E75%22 stroke-width=%223%22 fill=%22%23FDF6E3%22 /><text x=%2250%22 y=%2260%22 text-anchor=%22middle%22 fill=%22%23000000%22 font-size=%2240%22>${sanitizedTitle}</text></svg>`;
+                document.head.appendChild(newFavicon);
+            }
+        </script>
+    </body>
+</html>
